@@ -1,0 +1,27 @@
+# Krish's Portfolio Website Task Checklist
+
+- [ ] Initial Setup
+  - [ ] Review Next.js CLI options
+  - [ ] Initialize Next.js app with Tailwind CSS and Next.js App Router
+  - [ ] Install extra dependencies (Framer Motion, Three.js, React Three Fiber, Lucide-React)
+- [ ] Global Styling & Setup
+  - [ ] Update globals.css with dark modern UI colors and utilities (glassmorphism)
+  - [ ] Set up layout.tsx with SEO metadata
+- [ ] Develop Components
+  - [ ] 3D Animated Background
+  - [ ] Navbar (smooth scrolling links)
+  - [ ] Hero Section
+  - [ ] About Section
+  - [ ] Skills Section (animated cards)
+  - [ ] Projects Section (hover tilt effect)
+  - [ ] Education Timeline
+  - [ ] Hobbies & Interests Grid
+  - [ ] Resume & Goals Section
+  - [ ] Contact Form
+  - [ ] Footer
+- [ ] Assembly & Polish
+  - [ ] Combine all sections in `app/page.tsx`
+  - [ ] Add smooth page transitions and cursor glow effect
+  - [ ] Test responsivness
+- [ ] Documentation
+  - [ ] Write README.md with local running and Vercel deployment instructions
