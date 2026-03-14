@@ -69,10 +69,10 @@ export default function Hero() {
                     className="flex gap-6"
                 >
                     {[
-                        { icon: <Linkedin size={22} />, href: "https://linkedin.com", label: "LinkedIn" },
-                        { icon: <Github size={22} />, href: "https://github.com", label: "GitHub" },
-                        { icon: <Twitter size={22} />, href: "https://twitter.com", label: "X (Twitter)" },
-                        { icon: <Facebook size={22} />, href: "https://facebook.com", label: "Facebook" },
+                        { icon: <Linkedin size={22} />, href: "https://www.linkedin.com/in/krish-khandelwal-b12958337", label: "LinkedIn" },
+                        { icon: <Github size={22} />, href: "https://github.com/Krish14-ai", label: "GitHub" },
+                        { icon: <Twitter size={22} />, href: "https://x.com/kkha6652", label: "X (Twitter)" },
+                        { icon: <Facebook size={22} />, href: "https://www.facebook.com/profile.php?id=61577978290719", label: "Facebook" },
                     ].map((social, index) => (
                         <Link
                             key={index}
