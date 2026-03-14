@@ -1,52 +1,161 @@
-# Krish's Portfolio
+# MY Portfolio
 
-A modern, creative, and professional personal portfolio website for Krish, a Machine Learning Developer and Engineering Student.
+A modern, creative, and professional personal portfolio website for **Krish**, a Machine Learning Developer and Engineering Student passionate about building intelligent systems and data-driven applications.
 
-Built with:
-- **Next.js** (App Router)
-- **React** 
-- **Tailwind CSS** (v4)
-- **Framer Motion** (Animations)
-- **React Three Fiber** & **Three.js** (3D Background)
-- **Lucide React** (Icons)
-
-## Features
-
-- 🌌 **3D Animated Starfield Background** using React Three Fiber.
-- ✨ **Smooth Scroll & Animations** powered by Framer Motion.
-- 📱 **Fully Responsive** design that works across all devices.
-- 🎨 **Dark Modern UI** with glassmorphism effects and modern typography.
-- 🚀 **SEO Optimized** metadata included.
+This portfolio showcases projects, technical skills, and my learning journey in **Machine Learning, AI, and Software Development**.
 
 ---
 
-## Running Locally
+## 🚀 Live Website
 
-To run this project on your local machine, follow these steps:
+Visit the live portfolio here:
 
-1. **Install Dependencies** (Ensure you have Node.js installed):
-   ```bash
-   npm install
-   ```
-2. **Start the Development Server**:
-   ```bash
-   npm run dev
-   ```
-3. **View the Site**:
-   Open [http://localhost:3000](http://localhost:3000) in your browser.
-
-> **Note**: To ensure the Resume download works, add your actual resume as a PDF file named `resume.pdf` inside the `public` folder.
+```
+https://your-portfolio-url.vercel.app
+```
 
 ---
 
-## Deployment to Vercel
+## 🧑‍💻 About Me
 
-Enjoy out-of-the-box Vercel deployment capabilities:
+I am an engineering student focused on **Machine Learning, Artificial Intelligence, and software development**.
+I enjoy building projects that combine **data analysis, algorithms, and real-world problem solving**.
 
-1. Push your code to a GitHub repository.
-2. Sign in to [Vercel](https://vercel.com/) and click **Add New Project**.
-3. Import your GitHub repository.
-4. Leave all settings as default (Framework Preset: Next.js).
-5. Click **Deploy**.
+This portfolio highlights:
 
-Vercel will handle the entire build process and generate a live URL for your creative portfolio!
+* My **technical skills**
+* My **software and ML projects**
+* My **learning journey**
+* My **contact information**
+
+---
+
+## ⚙️ Tech Stack
+
+This project was built using modern web technologies:
+
+* **Next.js** – React framework for production applications
+* **React** – Component-based UI development
+* **Tailwind CSS (v4)** – Utility-first styling framework
+* **Framer Motion** – Smooth animations and transitions
+* **React Three Fiber** – 3D rendering with Three.js in React
+* **Three.js** – Interactive 3D graphics for the starfield background
+* **Lucide React** – Modern icon library
+
+---
+
+## ✨ Features
+
+* 🌌 **3D Animated Starfield Background** using React Three Fiber
+* ✨ **Smooth Animations and Scroll Effects** powered by Framer Motion
+* 🎨 **Modern Dark UI Design** with glassmorphism styling
+* 📱 **Fully Responsive Layout** optimized for desktop, tablet, and mobile
+* 📄 **Downloadable Resume** integration
+* 🔗 **Social Media Integration** (GitHub, LinkedIn, X, Facebook)
+* 🚀 **SEO Optimized** for better search visibility
+* ⚡ **Fast Performance** with optimized Next.js build
+
+---
+
+## 📂 Project Structure
+
+```
+portfolio/
+│
+├ public/              # Static assets
+│   └ resume.pdf
+│
+├ src/
+│   ├ components/      # UI components
+│   ├ hooks/           # Custom React hooks
+│   ├ lib/             # Utility functions
+│   ├ pages/ or app/   # Page routes
+│
+├ package.json         # Project dependencies
+├ next.config.ts       # Next.js configuration
+├ README.md            # Project documentation
+└ .gitignore
+```
+
+---
+
+## 🖥️ Running Locally
+
+To run this project locally:
+
+### 1. Install Dependencies
+
+Ensure **Node.js** is installed, then run:
+
+```bash
+npm install
+```
+
+### 2. Start the Development Server
+
+```bash
+npm run dev
+```
+
+### 3. Open in Browser
+
+Visit:
+
+```
+http://localhost:3000
+```
+
+---
+
+## 📄 Resume Setup
+
+To enable the **Resume Download** button:
+
+1. Place your resume inside the `public` folder.
+2. Name the file:
+
+```
+resume.pdf
+```
+
+The download button will automatically work once the file is added.
+
+---
+
+## 🌍 Deployment (Vercel)
+
+The easiest way to deploy this project is using **Vercel**.
+
+Steps:
+
+1. Push the project to **GitHub**
+2. Go to **https://vercel.com/**
+3. Click **Add New Project**
+4. Import your repository
+5. Leave all settings as default
+6. Click **Deploy**
+
+Vercel will automatically build and host your portfolio.
+
+---
+
+## 📬 Contact
+
+Feel free to connect with me:
+
+* GitHub: https://github.com/Krish14-ai
+* LinkedIn: https://linkedin.com/in/your-linkedin
+* X (Twitter): https://x.com/your-handle
+* Facebook: https://www.facebook.com/profile.php?id=61577978290719
+
+---
+
+## ⭐ Support
+
+If you like this project, consider giving the repository a **star ⭐ on GitHub**.
+
+---
+
+## 📜 License
+
+This project is open-source and available under the **MIT License**.
