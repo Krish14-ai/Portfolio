@@ -145,7 +145,7 @@ Feel free to connect with me:
 
 * GitHub: https://github.com/Krish14-ai
 * LinkedIn: https://linkedin.com/in/your-linkedin
-* X (Twitter): https://x.com/your-handle
+* X (Twitter): https://x.com/krish1477673
 * Facebook: https://www.facebook.com/profile.php?id=61577978290719
 
 ---
