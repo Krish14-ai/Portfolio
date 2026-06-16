@@ -122,6 +122,58 @@ The download button will automatically work once the file is added.
 
 ---
 
+## 📬 Contact Form Email Setup
+
+The contact form sends email through a Next.js App Router API route at:
+
+```
+src/app/api/contact/route.ts
+```
+
+This project uses **Resend** for email delivery.
+
+### 1. Create Environment Variables
+
+Copy `.env.example` to `.env.local` and add your real values:
+
+```env
+RESEND_API_KEY=your_resend_api_key
+CONTACT_TO_EMAIL=your-inbox@example.com
+CONTACT_FROM_EMAIL=Portfolio Contact <onboarding@resend.dev>
+```
+
+For production, use a sender email from a verified domain in Resend, for example:
+
+```env
+CONTACT_FROM_EMAIL=Portfolio Contact <contact@yourdomain.com>
+```
+
+### 2. Verify Locally
+
+Run the app:
+
+```bash
+npm run dev
+```
+
+Submit the contact form, then check:
+
+* Browser Network tab: `POST /api/contact` returns `200`
+* Resend dashboard shows the email event
+* Inbox or spam folder receives the message
+
+### 3. Configure Vercel
+
+In Vercel, add the same variables under:
+
+```
+Project Settings → Environment Variables
+```
+
+Add them for Production and Preview environments, then redeploy the project.
+
+---
+
 ## 🌍 Deployment (Vercel)
 
 The easiest way to deploy this project is using **Vercel**.

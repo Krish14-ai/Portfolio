@@ -8,16 +8,46 @@ import { useState } from "react";
 export default function Contact() {
     const [loading, setLoading] = useState(false);
     const [success, setSuccess] = useState(false);
+    const [error, setError] = useState("");
 
-    const handleSubmit = (e: React.FormEvent) => {
+    const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
         setLoading(true);
-        // Simulate form submission
-        setTimeout(() => {
-            setLoading(false);
+        setSuccess(false);
+        setError("");
+
+        const form = e.currentTarget;
+        const formData = new FormData(form);
+
+        const payload = {
+            name: formData.get("name"),
+            email: formData.get("email"),
+            message: formData.get("message"),
+        };
+
+        try {
+            const response = await fetch("/api/contact", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify(payload),
+            });
+
+            const result = await response.json().catch(() => null);
+
+            if (!response.ok) {
+                throw new Error(result?.error || "Message failed to send.");
+            }
+
+            form.reset();
             setSuccess(true);
             setTimeout(() => setSuccess(false), 3000);
-        }, 1500);
+        } catch (err) {
+            setError(err instanceof Error ? err.message : "Message failed to send.");
+        } finally {
+            setLoading(false);
+        }
     };
 
     return (
@@ -99,6 +129,7 @@ export default function Contact() {
                                 <input
                                     type="text"
                                     id="name"
+                                    name="name"
                                     required
                                     className="w-full bg-black/20 border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-colors"
                                     placeholder="John Doe"
@@ -110,6 +141,7 @@ export default function Contact() {
                                 <input
                                     type="email"
                                     id="email"
+                                    name="email"
                                     required
                                     className="w-full bg-black/20 border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-colors"
                                     placeholder="john@example.com"
@@ -120,12 +152,25 @@ export default function Contact() {
                                 <label htmlFor="message" className="block text-sm font-medium text-gray-300 mb-2">Message</label>
                                 <textarea
                                     id="message"
+                                    name="message"
                                     required
                                     rows={4}
                                     className="w-full bg-black/20 border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-colors resize-none"
                                     placeholder="Your message here..."
                                 ></textarea>
                             </div>
+
+                            {error && (
+                                <p className="text-sm text-red-300" role="alert">
+                                    {error}
+                                </p>
+                            )}
+
+                            {success && (
+                                <p className="text-sm text-emerald-300" role="status">
+                                    Message sent successfully.
+                                </p>
+                            )}
 
                             <button
                                 type="submit"
